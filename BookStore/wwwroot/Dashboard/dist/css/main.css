@@ -1,0 +1,3 @@
+﻿.card-body::after, .card-footer::after, .card-header::after {
+    display: none !important;
+}

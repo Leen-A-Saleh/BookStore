@@ -1,0 +1,38 @@
+﻿@model BookStore.ViewModel.CategoryVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@section Title {
+       Categories
+}
+
+@section SubTitle {
+    @(Model?.Id == null ? "Create new category" : "Edit category")
+}
+
+    
+    <!-- form start -->
+<form class="form-horizontal" asp-controller="Categories">
+    @Html.AntiForgeryToken()
+    <div class="card-body">
+        <div>
+            <div class="form-group row">
+                <label asp-for="Name" class="col-12 col-form-label"></label>
+                <div class="col-12">
+                    <input type="text" class="form-control" asp-for="Name" placeholder="Category Name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">@(Model?.Id==null?"Add":"Update")</button>
+        </div>
+        <!-- /.card-footer -->
+    </form>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

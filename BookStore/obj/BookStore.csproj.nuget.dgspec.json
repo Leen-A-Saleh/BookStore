@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leena\\BookStore\\BookStore\\BookStore\\BookStore.csproj": {}
+    "C:\\Users\\leena\\BookStore\\BookStore\\BookStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leena\\BookStore\\BookStore\\BookStore\\BookStore.csproj": {
+    "C:\\Users\\leena\\BookStore\\BookStore\\BookStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leena\\BookStore\\BookStore\\BookStore\\BookStore.csproj",
+        "projectUniqueName": "C:\\Users\\leena\\BookStore\\BookStore\\BookStore.csproj",
         "projectName": "BookStore",
-        "projectPath": "C:\\Users\\leena\\BookStore\\BookStore\\BookStore\\BookStore.csproj",
+        "projectPath": "C:\\Users\\leena\\BookStore\\BookStore\\BookStore.csproj",
         "packagesPath": "C:\\Users\\leena\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leena\\BookStore\\BookStore\\BookStore\\obj\\",
+        "outputPath": "C:\\Users\\leena\\BookStore\\BookStore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,6 +69,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[8.0.26, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.23, )"
             }
           },
           "imports": [

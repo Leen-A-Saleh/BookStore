@@ -15,6 +15,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="~/Dashboard/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="~/Dashboard/dist/css/adminlte.min.css">
+    <!--sweet alert-->
+    <link rel="stylesheet" href="~/Dashboard/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+    <!--Custom css-->
+    <link rel="stylesheet" href="~/Dashboard/dist/css/main.css">
 </head>
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
@@ -225,6 +229,27 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </p>
                             </a>
                         </li>
+
+                        <!--!categories nav link-->
+                        <li class="nav-item">
+                            <a asp-controller="Categories" asp-action="Index" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                    Categories
+                                </p>
+                            </a>
+                        </li>
+
+                        <!--!Authors nav link-->
+                        <li class="nav-item">
+                            <a asp-controller="Authors" asp-action="Index" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                    Authors
+                                </p>
+                            </a>
+                        </li>
+
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -239,7 +264,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Starter Page</h1>
+                            <h1 class="m-0">@RenderSection("Title",false)</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
@@ -257,19 +282,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <div class="row">
                         <div class="col-12">
                                 <div class="card">
-                                    <div class="card-header">
-                                        <h5 class="m-0">Featured</h5>
+                                    <div class="card-header d-flex align-items-center justify-content-between">
+                                        <h5 class="m-0">@RenderSection("SubTitle",false)</h5>
+                                         @RenderSection("ActionBtn", false)
                                     </div>
-                                    <div class="card-body">
-
+                                   
                                         @RenderBody()
-
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-
-                                </div>
-                            </div>
+                            </div> 
                         </div>
                     </div>
                     <!-- /.row -->
@@ -305,5 +324,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="~/Dashboard/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="~/Dashboard/dist/js/adminlte.min.js"></script>
+    <!--sweet alert-->
+    <script src="~/Dashboard/plugins/sweetalert2/sweetalert2.min.js"></script>
+    @RenderSection("Scripts",false)
 </body>
 </html>
